@@ -6,10 +6,9 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleToggle = () => {
-    setIsOpen(true);
+  function handleToggle (e) {
+    setIsOpen({isOpen: !isOpen});
   };
-
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -17,7 +16,7 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="Beach Resort" />
           </Link>
-          <button type="button" className="nav-btn" onCLick={handleToggle}>
+          <button type="button" className="nav-btn" onClick={handleToggle}>
             <FaAlignRight className="nav-icon" />
           </button>
         </div>

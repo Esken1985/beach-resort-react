@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  function handleToggle (e) {
-    setIsOpen({isOpen: !isOpen});
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
   };
+
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -32,5 +33,6 @@ const Navbar = () => {
     </nav>
   );
 };
+
 
 export default Navbar;
